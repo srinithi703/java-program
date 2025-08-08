@@ -1,0 +1,56 @@
+import java.util.Scanner;
+
+public class YoungestOldestFinder {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        
+        if (!scanner.hasNextInt()) {
+            System.out.println("Invalid Input");
+            return;
+        }
+        int n = scanner.nextInt();
+
+       
+        if (n < 0) {
+            System.out.println("Invalid Input");
+            return;
+        }
+
+       
+        int youngest = Integer.MAX_VALUE;
+        int oldest = Integer.MIN_VALUE;
+
+        for (int i = 0; i < n; i++) {
+            if (!scanner.hasNextInt()) {
+                System.out.println("Invalid Input");
+                return;
+            }
+
+            int age = scanner.nextInt();
+
+            if (age < 0) {
+                System.out.println("Invalid Input");
+                return;
+            }
+
+            
+            if (age < youngest) {
+                youngest = age;
+            }
+            if (age > oldest) {
+                oldest = age;
+            }
+        }
+
+        
+        if (n == 0) {
+            System.out.println("Invalid Input");
+        } else {
+            System.out.println("Youngest=" + youngest);
+            System.out.println("Oldest=" + oldest);
+        }
+
+        scanner.close();
+    }
+}
