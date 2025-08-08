@@ -1,0 +1,18 @@
+import java.util.*;
+public class Solution {
+public static void main(String[] args) {
+Scanner Sc=new Scanner (system.in);
+int a[] = {2,4,5,6};
+int size = Sc.nextint();
+int asize= new intsize
+for(int i=0;i<a.length;i++)
+{
+system.out.println(a[i]);
+system.out.println(a[2]);
+system.out.println(a[4]);
+system.out.println(a[5]);
+system.out.println(a[6]);
+}
+}
+}
+   
