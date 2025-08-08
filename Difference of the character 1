@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class CharDifference {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine().trim();
+        sc.close();
+
+        int starCount = 0, hashCount = 0;
+        for (char c : s.toCharArray()) {
+            if (c == '*') starCount++;
+            else if (c == '#') hashCount++;
+        }
+
+        int diff = Math.abs(starCount - hashCount);
+        String result;
+        if (diff == 0) {
+            result = "0";
+        } else {
+            result = String.format("%03d", diff);
+        }
+
+        System.out.print("The Difference of the character in the given string: ");
+        System.out.print(result);
+
+        // If you want to indicate odd/even, uncomment below:
+        // System.out.print(" (" + (diff % 2 == 0 ? "Even" : "Odd") + ")");
+    }
+}
